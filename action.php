@@ -1,5 +1,8 @@
 <?php 
 // Initialize vars:
+$lat = $_GET['lat'];
+$lng = $_GET['lng'];
+echo $lat . " " . $lng;
 $API_KEY = "9572fb7849834bb69c16da835b960692";
 $city = $_POST['city'];
 $coordinates = 0;
@@ -8,7 +11,7 @@ $nextDay = $currentTime;
 $nextDay = date('Y-m-d', strtotime($nextDay . " + 1 days"));
 
 // Connect to API and get data:
-$url = "http://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh,NC&key=$API_KEY";
+$url = "http://api.weatherbit.io/v2.0/forecast/daily?&lat=38.123&lon=-78.543&key=$API_KEY";
 
 $openSession = curl_init();
 // Will return the response, if false it print the response:

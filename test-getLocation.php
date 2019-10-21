@@ -34,4 +34,14 @@ $lng = $response['results'][0]['geometry']['location']['lng'];
 
 // Closing:
 curl_close($openSession);
+
+
+header("location: action.php?lat=$lat&lng=$lng"); 
+
 ?>
+
+<form action="test-getLocation.php" method="post">
+        <p>TEST</p>
+        <p><input type="text" name="TEST" /></p>
+        <p style="text-align: left"><button>Submit</button>
+    </form>
